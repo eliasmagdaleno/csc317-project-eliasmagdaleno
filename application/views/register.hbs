@@ -1,0 +1,100 @@
+
+    <main>
+      <div class="form-unscoped">
+        <div class="form container">
+          <form id="registration-form" action="/users/register" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="form-header">
+              Account Registration
+              <p>Please fill in this form to create an account.</p>
+            </div>
+            <div class="input-control">
+              <label for="username"></label>
+              <input
+                class="site-input"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter username"
+                required
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+              <!--
+              <div id="username-rules" class="site-input">
+                {{#each reg-error}}
+                {{/each}}
+
+              </div>
+              -->
+            </div>
+
+            <div class="input-control">
+              <label for="email"></label>
+              <input
+                class="site-input"
+                type="email"
+                placeholder="Enter Email"
+                name="email"
+                id="email"
+                required
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="input-control">
+              <label for="password-field"></label>
+              <input
+                class="site-input"
+                type="password"
+                name="password"
+                id="password-field"
+                placeholder="Password"
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="input-control">
+              <label for="re-psw"></label>
+              <input
+                class="site-input"
+                type="password"
+                placeholder="Repeat Password"
+                name="rePsw"
+                id="re-psw"
+                required
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+
+            <div class="form-check">
+              <label>
+                <input
+                  class="checkbox-age"
+                  type="checkbox"
+                  name="ageCheck"
+                  required
+                />I'm at least 13 years old
+              </label>
+              <label>
+                <input
+                  class="checkbox-tos"
+                  type="checkbox"
+                  name="tosCheck"
+                  required
+                />I accept the <a href="#">TOS and Privacy Rules</a>.
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="registerbtn">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+

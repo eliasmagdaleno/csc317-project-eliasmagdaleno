@@ -1,0 +1,40 @@
+<nav class="topnav">
+    
+    <ul>
+        
+        <li>
+            <a class="active" href="/">
+            <i class="fa-solid fa-house"></i> Home
+            </a>
+        </li>
+
+        {{#if isLoggedIn}}
+    
+            <li>
+                <a href="/postvideo"><i class="fa-solid fa-upload"></i> Upload Video</a>
+                
+            </li>
+        {{/if}}
+         <li class="search"> 
+            <form class="search-bar" action="/posts/search" method="GET" enctype="application/x-www-form-urlencoded">
+                <input id="search-text" class="search-text" name="searchValue" type="text"/>
+                <button type="submit" class="search-button fas fa-search"></button>
+            </form>
+            
+                
+        </li>
+       
+       
+        {{#if isLoggedIn}}
+            {{> userdropdown}}
+        {{else}}
+             <li>
+                 <a href="/register">Registration</a>
+            </li>
+            <li>
+                <a href="/login" class="nav-items">Log in</a>
+            </li>
+            
+        {{/if}}
+    </ul>
+</nav>

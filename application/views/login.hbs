@@ -1,0 +1,36 @@
+<div class="form-unscoped">
+  <div class="form container">
+    <form
+      id="login-form"
+      action="/users/login"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <div class="form-header">Sign in</div>
+      <div class="login">
+        <label for="username-field"></label>
+        <input
+          type="text"
+          name="username"
+          id="username-field"
+          class="site-input"
+          placeholder="username"
+        />
+        <label for="password-field"></label>
+        <input
+          type="password"
+          name="password"
+          id="password-field"
+          class="site-input"
+          placeholder="password"
+        />
+        <label>
+          <input type="checkbox" checked="checked" name="remember" />Remember me
+        </label>
+        <button type="submit" value="Login" id="login-form-submit">
+          Sign in
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

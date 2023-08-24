@@ -1,0 +1,25 @@
+.product-card{
+    background-color: var(--site-bg);
+    gap: 40px;
+    
+}
+.user-post-history{
+    gap: 20px;
+}
+.profile-info{
+    
+}
+.video-title{
+    font-weight: bold;
+    text-align: left;
+    
+}
+.video-description{
+    font-size: 10px;
+}
+
+.post-delete-button {
+    align-self: center;
+    
+}
+.post-delete-button 

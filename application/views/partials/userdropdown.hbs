@@ -1,0 +1,19 @@
+<div class="dropdown-menu">
+  <button class="button-dropdown">
+    {{user.username}}
+    <i class="fa-regular fa-circle-user fa-lg"></i>
+  </button>
+  <div class="dropdown-menu-items">
+
+    <a class="nav-items" href="/users/profile/{{user.userId}}">
+      <i class="fa-regular fa-user"></i>
+      Profile</a>
+    <form action="/users/logout" method="POST">
+      <input type="hidden" value="{{csrf}}" />
+      <button class="nav-items" type="submit">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log out</button>
+    </form>
+
+  </div>
+</div>

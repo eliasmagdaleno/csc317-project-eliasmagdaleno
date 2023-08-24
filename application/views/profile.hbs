@@ -1,0 +1,58 @@
+<div class="profile-container">
+  
+    <div class="profile-info">
+      <header class="user-username"><h2>Username: </h2> {{user.username}}
+      </header>
+
+      <strong class="user-email">
+        <h2>Email: </h2>
+         {{user.email}}
+        </strong>
+    </div>
+    <div class="user-post-history-container">
+
+        <h2>User's Posts</h2>
+        <div class="user-post-history">
+          {{#each posts}}
+            <div class="product-card">
+                <img class="product-img" src="/{{thumbnail}}" />
+                <div>
+                    <p class="video-title">
+                        <a class="video-link" href="/posts/{{id}}">{{title}}</a>
+                    </p>
+                    <p class="video-author">{{author}}</p>
+                    <p class="video-description">{{description}}</p>
+                    <button class="post-delete-button fa-solid fa-trash" data-postid="{{id}}">
+                    </button>
+                </div>
+            </div>
+          {{/each}}
+        </div>
+
+
+    </div>
+  
+</div>
+
+<script>
+  document.querySelectorAll('.post-delete-button').forEach(button =>{
+    button.addEventListener('click',() =>{
+      var postId = button.getAttribute('data-postid');
+      fetch(`/posts/delete/${postId}`,{
+        method: `DELETE`,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then((response) => response.json())
+      .then((data)=> {
+        if(data.error){
+          console.error(data.error);
+          return;
+        }
+        window.location.href = '/';
+      })
+      .catch(error => console.error('Error occured while deleting post'));
+    });
+  })
+</script>

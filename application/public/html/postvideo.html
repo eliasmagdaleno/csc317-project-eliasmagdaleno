@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video Upload</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <a class="active" href="Index.html">Home</a>
+        </li>
+        <li>
+          <a href="viewpost.html">View Post</a>
+        </li>
+        <li>
+          <a href="postvideo.html">Post Video</a>
+        </li>
+        <li>
+          <a href="registration.html">Registration</a>
+        </li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="profile.html">Profile</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="upload-page">
+        <div class="upload container">
+          <form id="upload-form">
+            <div class="upload-header"><h2>Upload video</h2></div>
+            <div>
+              <label for="title"><b>Title</b></label>
+              <input
+                class="site-input"
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Enter video title"
+                required
+              />
+            </div>
+            <div>
+              <label for="description"><b>Description</b></label>
+              <input
+                class="site-input"
+                type="text"
+                name="description"
+                id="description"
+                placeholder="Add a video description"
+              />
+            </div>
+
+            <div class="video-select">
+              <label for="upload"><b>Select video:</b></label>
+              <input type="file" id="upload" name="upload" accept="video/*" />
+            </div>
+
+            <div class="upload-tos">
+              <label>
+                <input type="checkbox" checked="checked" name="privacy" />
+                I agree to <a href="#"> the Acceptable Use Policy.</a>
+              </label>
+            </div>
+            <div>
+              <button type="submit" class="uploadbtn">Upload</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <h3>Contact me</h3>
+      <a href="mailto:emagdaleno@sfsu.edu">emagdaleno@sfsu.edu</a>
+      <p>Elias Magdaleno &copy; 2023</p>
+    </footer>
+  </body>
+</html>

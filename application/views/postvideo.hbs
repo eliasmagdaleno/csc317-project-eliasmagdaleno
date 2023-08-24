@@ -1,0 +1,59 @@
+<main>
+  <div class="upload-page">
+    <div class="upload container">
+
+      <header class="form-header"><h2>Upload video</h2></header>
+      <form
+        id="post-image"
+        class="upload-form"
+        action="/posts/create"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="input-group">
+          <label for="post-title" class="tags post-lbl-title"><b
+            >Title</b></label>
+          <input
+            class="site-input"
+            type="text"
+            name="title"
+            id="post-title"
+            placeholder="video title"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="description"><b>Description</b></label>
+          <input
+            class="site-input"
+            type="text"
+            name="description"
+            id="post-desc"
+            placeholder="Add a video description"
+          />
+        </div>
+
+        <div class="image-select">
+          <label class="tags post-lbl-video" for="upload">Select video</label>
+          <input
+            class="text-input post-input-video"
+            type="file"
+            id="img-select"
+            name="uploadVideo"
+          />
+        </div>
+
+        <div class="upload-tos">
+          <label>
+            <input type="checkbox" checked="checked" name="privacy" />
+            I agree to
+            <a href="#"> the Acceptable Use Policy.</a>
+          </label>
+        </div>
+        <div>
+          <button type="submit" class="uploadbtn">Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

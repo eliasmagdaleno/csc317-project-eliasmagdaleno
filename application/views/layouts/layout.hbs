@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+      <meta charset="UTF-8" />
+
+
+      <title>Document</title>
+      <script src="https://kit.fontawesome.com/c13f0bb631.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" type="text/css" href="/public/css/style.css" /> 
+      {{#each css}}<link rel="stylesheet" type="text/css" href="/public/css/{{this}}" />{{/each}}
+      {{#each js}}<script defer src="/public/js/{{this}}" type="text/javascript"></script>{{/each}}
+     
+  </head>
+  <body>
+      {{#if (nonEmptyObject messages)}}
+        {{> flashmessage this}}
+      {{/if}}
+      {{> header}}
+      {{> nav}}
+      {{{body}}}
+      {{> footer}}
+  </body>
+  <script>
+    
+    const dropdown = document.querySelector('.dropdown-menu');
+    dropdown.addEventListener('click', function() {
+    const dropdownMenuItems = this.querySelector('.dropdown-menu-items');
+    dropdownMenuItems.style.display = dropdownMenuItems.style.display === 'none' ? 'flex' : 'none';});
+  </script>
+</html>
